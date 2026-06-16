@@ -223,7 +223,7 @@ public class STUDENTGRADEMANAGER {
     }
     static void SHOWAVG() {
         System.out.println("=====STUDENTS-AVERAGE=====");
-        double total = 0;
+        double gradeTotal = 0;
 
         if(array.isEmpty() && arrayD.isEmpty() && arrayS.isEmpty()) {
             System.out.println("No class average to display.");
@@ -232,9 +232,9 @@ public class STUDENTGRADEMANAGER {
 
         for(int i = 0; i < array.size() && i < arrayD.size() && i < arrayS.size(); i++) {
             System.out.println((i + 1) + "." + array.get(i) + " | " + arrayD.get(i) + " | " + arrayS.get(i));
-            total += arrayD.get(i);
+            gradeTotal += arrayD.get(i);
         }
-        Double average = total / arrayD.size();
-        System.out.println("Class average: " + average);
+        Double classAverage = gradeTotal / arrayD.size();
+        System.out.println("Class average: " + classAverage);
     }
 }
